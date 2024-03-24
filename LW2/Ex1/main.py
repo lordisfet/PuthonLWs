@@ -1,4 +1,5 @@
 import math
+
 def found_z(x):
     return math.exp(x) + math.sqrt(x)
 
