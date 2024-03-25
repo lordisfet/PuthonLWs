@@ -2,7 +2,7 @@ def sum_even_index_elements():
     n = int(input("Введіть кількість елементів масиву: "))
     array = []
     for i in range(n):
-        array.append(int(input(f"Введіть елемент {i+1}: ")))
+        array.append(int(input(f"Введіть елемент {i}: ")))
 
     sum_even_index = 0
     for i in range(0, n, 2):
