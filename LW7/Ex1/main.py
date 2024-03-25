@@ -8,7 +8,7 @@ def find_next_boy(boys_dict, new_boy_height):
     for key in boys_dict.keys():
         if key > new_boy_height:
             taller_boys = key
-    print(taller_boys)
+    return taller_boys
 
 def paste_new_boy(boys_dict,new_boy_height, new_boy_name):
     boys_dict[new_boy_height] = new_boy_name
@@ -39,7 +39,7 @@ boys_dict = {
 # Створюємо словник функцій
 functions = {
     '1': output_dict,
-    '2': paste_new_boy,
+    '2': find_next_boy,
     '3': find_closest_height,
     '4': height_under_new_boy
 }
@@ -62,7 +62,7 @@ while True:
             new_boy_name = input("\nВведіть ім`я \"новенького\": ")
             new_boy_height = int(input("Введіть зріст новенького в сантиметрах: "))
             # boys_dict = functions[choice](boys_dict, new_boy_height, new_boy_name)
-            find_next_boy(boys_dict, new_boy_height)
+            print(f"Юнак який є найблище до \"новенького\" за стрістом має зріст: {functions[choice](boys_dict, new_boy_height)}")
         elif choice == '3':
             new_boy_height = int(input("Введіть зріст для порівняння: "))
             closest_height, closest_name = functions[choice](boys_dict, new_boy_height)
