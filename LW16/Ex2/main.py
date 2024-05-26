@@ -26,6 +26,5 @@ stemmed_tokens = [stemmer.stem(token) for token in tokens]
 stop_words = set(stopwords.words('english') + list(string.punctuation))
 filtered_tokens = [word for word in lemmatized_tokens if word.lower() not in stop_words]
 
-# Запис обробленого тексту у інший файл
 with open('processed_apollo_description.txt', 'w') as file:
     file.write(' '.join(filtered_tokens))
