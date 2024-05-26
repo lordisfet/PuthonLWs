@@ -27,5 +27,4 @@ def plot_all_countries_data():
     plt.tight_layout()
     plt.show()
 
-
 plot_all_countries_data()
